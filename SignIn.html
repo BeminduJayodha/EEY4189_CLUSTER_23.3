@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .signin-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .signin-form h2 {
+            text-align: center;
+        }
+
+        .signin-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .signin-form input[type="text"],
+        .signin-form input[type="password"],
+        .signin-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .signin-form button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .signin-form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer styles */
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="signin-form">
+        <h2>Sign In</h2>
+        <form action="/signin" method="post">
+            <label for="userType">I am a:</label>
+            <select id="userType" name="userType" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="patient">Patient</option>
+                <option value="counselor">Counselor</option>
+            </select>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; MindTalk. All rights reserved.</p>
+    </div>
+</body>
+</html>
