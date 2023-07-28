@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Account Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .profile {
+            margin: 20px;
+            padding: 20px;
+            border: 5px solid #ccc;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        .profile h2 {
+            text-align: center;
+        }
+        .profile label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .profile input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .edit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .menu {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 50px;
+            left: 0;
+            bottom: 15px;
+            width: 200px;
+        }
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu li {
+            padding: 20px;
+        }
+        .menu li:hover {
+            background-color: #555;
+            cursor: pointer;
+        }
+        
+        </style>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>Home</li>
+            <li>My Account Profile</li>
+            <li>Chat</li>
+            <li>My Appoinments</li>
+            <li>Schedules</li>
+            <li>Contact</li>
+            <li>Settings</li>
+            <li>User Feedback</li>
+        </ul>
+    </div>
+    <header>
+        <h1>My Account Profile</h1>
+    </header>
+    <div class="profile" id="profile">
+        <h2>User Profile</h2>
+        
+        <label>First Name:</label>
+        <input type="text" id="fname" value="First Name of the User" readonly>
+        <button class="edit-btn" onclick="enableEdit('fname')">Edit</button>
+        <br></br>
+
+        <label>Last Name:</label>
+        <input type="text" id="lname" value="Last Name of the User" readonly>
+        <button class="edit-btn" onclick="enableEdit('lname')">Edit</button>
+        <br></br>
+
+        <label>Email Address:</label>
+        <input type="text" id="email" value="you@example.com" readonly>
+        <button class="edit-btn" onclick="enableEdit('email')">Edit</button>
+        
+     </div>
+
+   
+</body>
+</html>
+
+
+
+
+
