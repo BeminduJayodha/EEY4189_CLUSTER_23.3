@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Web App</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #container {
+      display: flex;
+    }
+
+    #sidebar {
+      background-color: #333;
+      color: #fff;
+      width: 250px;
+      height: 100vh;
+      padding-top: 20px;
+    }
+
+    #content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    #sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #sidebar li {
+      padding: 10px;
+    }
+
+    #sidebar li:hover {
+      background-color: #444;
+      cursor: pointer;
+    }
+
+    #search-bar {
+      margin: 10px 10px 0;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+    }
+
+    #search-bar input {
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    #search-bar button {
+      margin-left: 5px;
+      padding: 8px;
+      background-color: #555;
+      color: #fff;
+      border: none;
+    }
+
+    #notification-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 20px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    #our-counselor {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      background-color: #00a1e6;
+      color: #fff;
+      cursor: pointer;
+      width: 25%;
+      text-align: center;
+    }
+
+    #our-counselor:hover {
+      background-color: #0081af;
+    }
+
+    h1 {
+      color: #00a1e6;
+    }
+    h2 {
+      color: #00a1e6;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="sidebar">
+      <ul>
+        <li>Home</li>
+        <li>My Account</li>
+        <li>Chat</li>
+        <li>Schedule</li>
+        <li>Contact</li>
+        <li>Setting</li>
+        <li>User Feedback</li>
+      </ul>
+    </div>
+    <div id="content">
+      <div id="search-bar">
+        <input type="text" placeholder="Search here...">
+        <button type="button">Search</button>
+      </div>
+      <div id="notification-icon">&#9888;</div>
+      <h1>A Flexible Counseling</h1>
+      <h1>Solutions</h1>
+      <h2>For Mental Health</h2>
+      <p>This is the content of the home page.</p>
+    </div>
+    <div id="our-counselor">Our Counselor</div>
+  </div>
+</body>
+</html>
