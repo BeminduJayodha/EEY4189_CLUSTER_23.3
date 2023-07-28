@@ -1,1 +1,17 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Appointment Scheduler</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-box" id="chatbox"></div>
+    <div class="user-input">
+      <input type="text" id="message" placeholder="Type your message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
