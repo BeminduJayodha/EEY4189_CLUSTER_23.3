@@ -1,0 +1,46 @@
+<!-- create_appointment_form.php -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Appointment</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html { 
+            background-image: url("schedul_bg.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <form action="create_appointment.php" method="post">
+        <label for="full_name">Full Name:</label>
+        <input type="text" name="full_name" required>
+
+        <label for="profession">Profession:</label>
+        <input type="text" name="profession" required>
+
+        <label for="speciality">Speciality:</label>
+        <input type="text" name="speciality" required>
+
+        <label for="date">Date:</label>
+        <input type="date" name="date" required>
+
+        <label for="time_start">Start Time:</label>
+        <input type="time" name="time_start" required>
+
+        <label for="time_end">End Time:</label>
+        <input type="time" name="time_end" required>
+
+        <button type="submit">Create Appointment</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-image: url("bg_SignUp_SignIn.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .content {
+            flex: 1;
+            text-align: left;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .side-image {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 24px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 40px;
+        }
+
+        .start-journey-container {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 24px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .side-image {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="create_appointment_form.html">Create Your Schedule</a>
+            <a href="counselor_appointments.php">Manage Your Schedule</a>
+            <a href="#">Check Your Appointments</a>
+            <a href="#">Start Counseling Sessions</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Welcome, Counselors!</h2>
+            <p>Embark on a journey with us to provide exceptional counseling services. Our platform is designed to make your experience seamless and fulfilling.</p>
+            <p>Unlock the full potential of our features:</p>
+            <ul>
+                <li>Create and customize your schedule effortlessly.</li>
+                <li>Efficiently manage your appointments with our user-friendly interface.</li>
+                <li>Stay organized by checking your upcoming appointments at any time.</li>
+                <li>Initiate and conduct counseling sessions with ease.</li>
+            </ul>
+            <p>Join us in making a positive impact on the lives of those seeking counseling.</p>
+            <div class="start-journey-container" onclick="openNav()">Start Your Journey Here!</div>
+        </div>
+
+        <div class="side-image">
+            <img src="connect_care.jpg" alt="Side Image" style="max-width: 100%;">
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
+</body>
+
+</html>

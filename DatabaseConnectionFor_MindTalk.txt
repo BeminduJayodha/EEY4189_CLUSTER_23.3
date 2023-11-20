@@ -1,0 +1,56 @@
+//Creare database
+CREATE DATABASE user_db;
+
+-- Table for patients
+CREATE TABLE patients (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Table for counselors
+CREATE TABLE counselors (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    profession VARCHAR(255) NOT NULL,
+    licennumber VARCHAR(255) NOT NULL
+);
+
+-- Table for common user details
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    userType VARCHAR(255) NOT NULL,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+-- Table for counselor appointment schedules
+CREATE TABLE appointments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    counselor_id INT,
+    full_name VARCHAR(255) NOT NULL,
+    profession VARCHAR(255) NOT NULL,
+    speciality VARCHAR(255) NOT NULL,
+    date DATE NOT NULL,
+    time_start TIME NOT NULL,
+    time_end TIME NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Table for booked appointments
+CREATE TABLE booked_appointments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    appointment_id INT,
+    patient_id INT,
+    booked_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+CREATE TABLE rating (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    rating_value INT
+);
